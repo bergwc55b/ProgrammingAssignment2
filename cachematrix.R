@@ -17,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
-    if ( temp != x ) {
+    if ( !identical(temp,x) ) {
         temp<-x
         makeCacheMatrix(x)
     } else {
